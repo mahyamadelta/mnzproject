@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mnzproject/static/css/main.d4ac0d31.css",
+    "main.js": "/mnzproject/static/js/main.560f0f65.js",
+    "static/js/488.b2f742c8.chunk.js": "/mnzproject/static/js/488.b2f742c8.chunk.js",
+    "index.html": "/mnzproject/index.html",
+    "main.d4ac0d31.css.map": "/mnzproject/static/css/main.d4ac0d31.css.map",
+    "main.560f0f65.js.map": "/mnzproject/static/js/main.560f0f65.js.map",
+    "488.b2f742c8.chunk.js.map": "/mnzproject/static/js/488.b2f742c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4ac0d31.css",
+    "static/js/main.560f0f65.js"
+  ]
+}
