@@ -1,5 +1,5 @@
 # 📜 mnzproject
-
+![Tampilan Landing Page mnzproject](assets/landing-page.jpg)
 mnzproject adalah sebuah platform berbasis web yang memungkinkan pengguna untuk melakukan scrolling jurnal penelitian ilmiah seperti halnya TikTok. Algoritma rekomendasi akan menyesuaikan jurnal yang muncul berdasarkan preferensi pengguna (jurnal yang di-like dan disimpan).
 
 ## ✨ Fitur Utama
