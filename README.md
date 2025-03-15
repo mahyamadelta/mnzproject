@@ -48,6 +48,7 @@ Proyek ini bersifat open-source, dan kontribusi dari siapapun sangat diharapkan!
 - [ ] Menambahkan sistem autentikasi pengguna
 - [ ] Integrasi API jurnal ilmiah
 - [ ] UI/UX Enhancements
+- [ ] Improvisasi fitur
 
 ## 📄 Lisensi
 Proyek ini menggunakan lisensi **MIT** - Silakan lihat file `LICENSE` untuk detail lebih lanjut.
