@@ -5,8 +5,7 @@ import SearchBar from "../components/SearchBar";
 import { fetchArticles } from "../utils/fetchArticles";
 import { isArticleSaved } from "../utils/saveUtils";
 
-// asset/landing_page.jpg
-//📜 mnzproject adalah platform berbasis web yang memungkinkan pengguna untuk scrolling jurnal penelitian ilmiah seperti TikTok. Dengan algoritma rekomendasi berbasis like dan save, pengguna dapat menemukan jurnal yang sesuai dengan minat mereka secara lebih interaktif. 🚀 
+//📜 mnzproject adalah platform berbasis web yang memungkinkan pengguna untuk scrolling jurnal penelitian ilmiah seperti TikTok.
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -20,7 +19,14 @@ function Home() {
     const loadInitialArticles = async () => {
       setLoading(true);
       const fetched = await fetchArticles(keyword || "science", 0);
-      setArticles(fetched);
+
+      // Hindari artikel duplikat
+      const unique = fetched.filter(
+        (item, index, self) =>
+          index === self.findIndex((a) => a.link === item.link)
+      );
+
+      setArticles(unique);
       setLoading(false);
     };
 
@@ -37,12 +43,25 @@ function Home() {
     ) {
       setLoading(true);
       const nextPage = page + 1;
-      setPage(nextPage);
       const newArticles = await fetchArticles(keyword || "science", nextPage);
-      setArticles((prevArticles) => [...prevArticles, ...newArticles]);
+  
+      setArticles((prevArticles) => {
+        const combined = [...prevArticles, ...newArticles];
+  
+        // Hindari duplikat berdasarkan link
+        const unique = combined.filter(
+          (item, index, self) =>
+            index === self.findIndex((a) => a.link === item.link)
+        );
+  
+        return unique;
+      });
+  
+      setPage(nextPage); // pindah ke bawah agar gak race condition
       setLoading(false);
     }
   };
+  
 
   const handleSearch = async (newKeyword) => {
     setKeyword(newKeyword);
@@ -50,7 +69,14 @@ function Home() {
     setSearchedKeyword(newKeyword);
     setLoading(true);
     const fetched = await fetchArticles(newKeyword, 0);
-    setArticles(fetched);
+
+    // Hilangkan duplikat juga saat pencarian
+    const unique = fetched.filter(
+      (item, index, self) =>
+        index === self.findIndex((a) => a.link === item.link)
+    );
+
+    setArticles(unique);
     setLoading(false);
   };
 
@@ -85,12 +111,6 @@ function Home() {
       <div className="bg-gray-100 min-h-screen font-sans">
         <div className="w-11/12 max-w-6xl mx-auto py-5">
           <SearchBar onSearch={handleSearch} />
-
-          {saveMessage && (
-            <div className="text-green-600 text-center font-semibold mb-4">
-              {saveMessage}
-            </div>
-          )}
 
           {!searchedKeyword && (
             <h2 className="text-2xl font-bold mb-5 text-center">
