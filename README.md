@@ -1,26 +1,30 @@
 # 📜 mnzproject
-![Tampilan Landing Page mnzproject](assets/landing-page.jpg)
-mnzproject adalah sebuah platform berbasis web yang memungkinkan pengguna untuk melakukan scrolling jurnal penelitian ilmiah seperti halnya TikTok. Algoritma rekomendasi akan menyesuaikan jurnal yang muncul berdasarkan preferensi pengguna (jurnal yang dilike dan disimpan).
 
-## ✨ Fitur Utama
-- 🔍 **Rekomendasi Jurnal** - Jurnal yang ditampilkan akan sesuai dengan minat pengguna.
-- 🎯 **Interaksi Pengguna** - Pengguna dapat like, save, dan share jurnal.
-- 📜 **Infinite Scrolling** - Navigasi yang smooth untuk eksplorasi tanpa batas.
-- 🏷 **Kategori & Tag** - Pengguna dapat mencari jurnal berdasarkan kategori atau tag tertentu.
-- 📊 **Analitik Pengguna** - Melihat tren jurnal populer dan rekomendasi yang lebih personal.
+**mnzproject** is a web-based platform that allows users to scroll through scientific research journals in a TikTok-like experience.
+A recommendation algorithm personalizes the journals shown based on user preferences, such as liked and saved articles.
 
-## 🛠 Teknologi yang Digunakan
-- **Frontend:** React
-- **Backend:** Node.js
-- **Database:** Supabase
+## ✨ Key Features
+* 🔍 **Journal Recommendations**
+  Journals are recommended based on user interests and interactions.
+* 🎯 **User Interaction**
+  Users can like, save, and share journals.
+* 📜 **Infinite Scrolling**
+  Smooth and continuous navigation for unlimited exploration.
+* 🏷 **Categories & Tags**
+  Users can explore journals by category or specific tags.
+* 📊 **User Analytics**
+  Insights into trending journals and more personalized recommendations.
 
-## 🚀 Cara Menjalankan Proyek
+## 🛠 Technologies Used
+* **Frontend:** React
+* **Backend:** Node.js
 
-1. Clone repository ini:
+## 🚀 How to Run the Project
+1. Clone this repository:
    ```sh
    git clone https://github.com/username/mnzproject.git
    ```
-2. Masuk ke direktori proyek:
+2. Navigate to the project directory:
    ```sh
    cd mnzproject
    ```
@@ -28,86 +32,65 @@ mnzproject adalah sebuah platform berbasis web yang memungkinkan pengguna untuk 
    ```sh
    npm install
    ```
-4. Jalankan server pengembangan:
+4. Run the development server:
    ```sh
    npm run dev
    ```
+---
 
-## 🤝 Kontribusi
-Proyek ini bersifat open-source, dan kontribusi dari siapapun sangat diharapkan!
-
-### Cara Berkontribusi:
-1. Fork repository ini.
-2. Buat branch baru untuk fitur/perbaikan yang ingin Anda tambahkan.
-3. Lakukan perubahan dan commit dengan pesan yang jelas.
-4. Kirimkan pull request dan tunggu review.
+## 🤝 Contribution
+This project is open-source, and contributions are highly welcome.
+### How to Contribute:
+1. Fork this repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes with a clear message.
+4. Submit a pull request and wait for review.
 
 ## 📌 Roadmap
-# 🚀 Roadmap Lanjutan untuk mnzproject
 
-## ✅ 1. Sistem Rekomendasi Berdasarkan Like & Save
+# 🚀 Future Roadmap for mnzproject
 
-⏩ *Mirip algoritma TikTok, konten muncul sesuai interaksi pengguna.*
+## ✅ 1. Recommendation System Based on Likes & Saves
+⏩ *Similar to TikTok-style content personalization.*
+* [ ] Add **Save** feature (in addition to Like)
+  * Store data in `localStorage` initially (can be migrated to database later)
+* [ ] Create a **Saved Articles** page
+* [ ] Show recommendations based on the most liked/saved topics
 
-- [ ] Tambah fitur **"Save"** (selain "Like")
-  - Simpan ke localStorage dulu (nantinya bisa ke database)
-- [ ] Buat halaman **Saved Articles**
-- [ ] Tampilkan **rekomendasi berdasarkan topik** yang paling banyak disukai/disimpan
+## 🎨 2. UI/UX Enhancements & Interactivity
+🔁 *To make the experience more engaging and TikTok-like*
+* [ ] Scroll and content-loading animations
+* [ ] Smoother infinite scrolling with loading skeletons (shimmer effect)
+* [ ] Add badges such as **"Trending"**, **"New"**, or **"Saved"**
+* [ ] Use header images for each article (default placeholder initially)
+      
+## 🧠 3. User Interest Analysis (Simple AI Layer)
+🤖 *The first step toward intelligence in mnzproject*
+* [ ] Track interactions per topic keyword (likes, saves)
+* [ ] Build a simple frequency-based model to:
+  * Identify most-liked topics
+  * Display a **"You might like..."** section
 
----
+## 🔐 4. User Authentication *(Optional for multi-user support)*
+✉️ *Allows likes and saves to be stored per user for better recommendations*
+* [ ] Google Login (using Firebase Auth)
+* [ ] Store like/save data in Firestore or Supabase
+* [ ] Fetch interaction data based on user ID
 
-## 🎨 2. UI/UX Polesan & Interaktivitas
+## 🛠️ 5. Admin Panel / Mini CMS
+🧪 *For content moderation if needed*
+* [ ] Simple panel to filter and review articles
+* [ ] Mark articles as **featured** or **trending**
 
-🔁 *Biar lebih engaging, fun, dan TikTok-vibe*
+## 🔄 Suggested Development Order
+1. **Save feature + Saved Articles page**
+2. Recommendations based on **Likes & Saves**
+3. UI animations and polish
+4. *(Optional)* Authentication & user-based persistence
 
-- [ ] Animasi saat scroll / loading konten baru
-- [ ] Infinite scroll lebih mulus + loading skeleton (shimmer)
-- [ ] Tambahkan **badge**: `"Trending"`, `"New"`, atau `"Saved"`
-- [ ] Gunakan **gambar header** untuk tiap artikel (default placeholder dulu)
+## 📄 License
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for more details.
 
----
-
-## 🧠 3. Analisis Minat Pengguna (Simple AI Layer)
-
-🤖 *Awal dari intelligence di mnzproject*
-
-- [ ] Track interaksi per topik keyword (like, save)
-- [ ] Buat model sederhana (berbasis frekuensi) untuk:
-  - Menampilkan topik yang paling sering di-*like*
-  - Menampilkan **"You might like..."** section
-
----
-
-## 🔐 4. Autentikasi User *(Opsional jika ingin multi-user)*
-
-✉️ *Agar like/save bisa tersimpan per user dan digunakan untuk rekomendasi*
-
-- [ ] Login dengan Google (pakai Firebase Auth)
-- [ ] Simpan data like/save ke Firestore atau Supabase
-- [ ] Fetch data berdasarkan user ID
-
----
-
-## 🛠️ 5. Admin Panel / CMS Mini
-
-🧪 *Untuk memoderasi artikel yang tampil (jika perlu)*
-
-- [ ] Panel sederhana buat nyaring artikel
-- [ ] Mark sebagai **featured/trending**
-
----
-
-## 🔄 Urutan yang Disarankan Selanjutnya:
-
-1. Fitur **Save + halaman Saved Articles**
-2. Rekomendasi berdasarkan **Like & Save**
-3. UI animasi + polish
-4. *(Opsional)* Login & penyimpanan per user
-
-
-## 📄 Lisensi
-Proyek ini menggunakan lisensi **MIT** - Silakan lihat file `LICENSE` untuk detail lebih lanjut.
-
----
-
-🚀 Mari bersama membangun platform edukasi yang lebih interaktif! Jika tertarik untuk berkontribusi atau memiliki ide lain, jangan ragu untuk bergabung! 😊
+🚀 Let’s build a more interactive and engaging educational platform together.
+If you’re interested in contributing or have ideas to share, feel free to join in.
