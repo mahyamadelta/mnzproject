@@ -36,8 +36,7 @@ A recommendation algorithm personalizes the journals shown based on user prefere
    ```sh
    npm run dev
    ```
----
-
+   
 ## 🤝 Contribution
 This project is open-source, and contributions are highly welcome.
 ### How to Contribute:
